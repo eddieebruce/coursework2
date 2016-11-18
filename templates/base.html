@@ -1,0 +1,169 @@
+<html>
+<head>
+  <title>Video Game Hub</title>
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+  <style>
+    body{
+      padding-top: 60px;
+  {% block head %}
+      background-image:url(static/greybackground.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  {% endblock %}   
+        
+        }
+    .nav-pills > li > a {
+      color: #74767a;
+      font-family; 'Open sans', sans-serif !important;
+      font-size: 2em ;
+      padding: 1px 1px 1px ;
+      }
+    .navbar > li > a {
+      color: #ffffff;
+      }
+
+    h1 {
+       position: relative;
+       font-size: 70px;
+       font-family: 'Lobster', helvetica, arial;
+       text-align:center; 
+        } 
+    h1 a {
+        text-decoration: underline;
+        color: #666;
+        position: absolute;
+        text-align:center;
+
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+        from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,.5)),
+        to(rgba(0,0,0,1)));
+        }
+    h1:after {
+        content : 'Video Games Catalogue';
+        color: #d6d6d6;
+        text-shadow: 0 1px 0 white;
+        }
+  p {
+       font: 35px Tahoma, Helvetica, Arial, Sans-Serif;
+       text-align: center;
+       color: #ffffff;
+       text-shadow; 0px 2px 3px #555;
+       }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" 
+      data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+      aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="/">Home</a>
+   </div>
+    <div id="navbar" class="collapse navbar-collapse">
+       <ul class="nav nav-pills nav-justified">
+            <li><a href="/Playstation4">Playstation 4</a></li>
+            <li><a href="/XboxOne">Xbox One</a></li>
+            <li><a href="/WiiU">Wii U</a></li>
+       </ul>
+    </div>
+   </div>
+  </nav>
+
+  <div class="container">
+       <h1><a> Video Games Catalogue </a> </h1>
+       {% block content %}
+      <p>Here is a list of popular new releases.</p>
+      
+ <a href="uncharted4"><img src="static/uncharted4.jpg" alt="Uncharted 4" style=
+"width:200px;height:320px;"></a>
+
+ <a href="halo5"><img src="static/halo5.jpg" alt="Halo 5" style=
+"width:200px;height:320px;"></a>
+
+ <a href="smashbrosu"><img src="static/smashbrosu.jpg" alt="Super Smash Bros Wii U" style=
+"width:200px;height:320px;"></a>
+
+ <a href="thelastofus"><img src="static/thelastofus.jpg" alt="The Last of us" style=
+"width:200px;height:320px;"></a>
+
+ <a href="rarereplay"><img src="static/rarereplay.jpg" alt="Rare Replay" style=
+"width:200px;height:320px;"></a>
+
+ <a href="mariokart8"><img src="static/mariokart8.jpg" alt="Mario Kart 8" style=
+"width:200px;height:320px;"></a>
+
+ <a href="infamous"><img src="static/infamousss.jpg" alt="Infamous Second Son" style=
+"width:200px;height:320px;"></a>
+
+ <a href="deadrising3"><img src="static/deadrising3.jpg" alt="Dead Rising 3" style=
+"width:200px;height:320px;"></a>
+
+ <a href="supermariomaker"><img src="static/supermariomaker.jpg" alt="Mario Maker" style=
+"width:200px;height:320px;">></a>
+
+ <a href="bioshock"><img src="static/bioshock.jpg" alt="Bioshock the Collection" style=
+"width:200px;height:320px;">></a>
+
+ <a href="tombraider"><img src="static/tombraider.jpg" alt="Rise of the Tomb Raider" style=
+"width:200px;height:320px;">></a>
+
+ <a href="supermario3dworld"><img src="static/supermario3dworld.jpg" alt="Super Mario 3d World" style=
+"width:200px;height:320px;">></a>
+
+ <a href="raymanlegends"><img src="static/raymanlegends.jpg" alt="Rayman Legends" style=
+"width:200px;height:320px;">></a>
+
+ <a href="dyinglight"><img src="static/dyinglight.jpg" alt="Dying Light" style=
+"width:200px;height:320px;">></a>
+
+ <a href="windwakerhd"><img src="static/windwakerhd.jpg" alt="The Legend of Zelda: Wind Waker HD" style=
+"width:200px;height:320px;">></a>
+
+ <a href="batman"><img src="static/arkhamknight.jpg" alt="Batman Arkham Knight" style=
+"width:200px;height:320px;">></a>
+
+ <a href="starfoxzero"><img src="static/starfoxzero.jpg" alt="Star Fox Zero" style=
+"width:200px;height:320px;">></a>
+
+ <a href="metalgearsolidv"><img src="static/metalgearsolidv.jpg" alt="Metal Gear Solid V: The definate
+Experience" style=
+"width:200px;height:320px;">></a>
+
+ <a href="twilightprincesshd"><img src="static/twilightprincesshd.jpg" alt="The Legend of Zelda: Twilight
+Princess HD" style=
+"width:200px;height:320px;">></a>
+
+ <a href="fallout4"><img src="static/fallout4.jpg" alt="Fallout 4" style=
+"width:200px;height:320px;">></a>
+
+ <a href="pikmin3"><img src="static/pikmin3.jpg" alt="Pikmin 3" style=
+"width:200px;height:320px;">></a>
+
+ <a href="bloodborne"><img src="static/bloodborne.jpg" alt="Bloodborne" style=
+"width:200px;height:320px;">></a>
+
+ <a href="killerinstinct"><img src="static/killerinstinct.jpg" alt="Killer Instinct" style=
+"width:200px;height:320px;">></a>
+
+ <a href="splatoon"><img src="static/splatoon.jpg" alt="Splatoon" style=
+"width:200px;height:320px;">></a>
+
+ <a href="codghosts"><img src="static/codghosts.jpg" alt="Call of Duty: Ghosts" style=
+"width:200px;height:320px;">></a>
+
+      {% endblock %}
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src={{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>
