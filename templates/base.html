@@ -1,14 +1,15 @@
 <html>
 <head>
-  <title>Video Game Hub</title>
+  <title>Digital Shop</title>
   <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
   <style>
     body{
       padding-top: 60px;
   {% block head %}
-      background-image:url(static/greybackground.jpg);
+      background-image:url(static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size:cover;
   {% endblock %}   
         
         }
@@ -39,7 +40,7 @@
         to(rgba(0,0,0,1)));
         }
     h1:after {
-        content : 'Video Games Catalogue';
+        content : 'Digital Shop';
         color: #d6d6d6;
         text-shadow: 0 1px 0 white;
         }
@@ -53,33 +54,33 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-   <div class="container">
+  <nav class="navbar navbar-inverse">
+   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" 
-      data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-      aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-        <a class="navbar-brand" href="/">Home</a>
-   </div>
-    <div id="navbar" class="collapse navbar-collapse">
-       <ul class="nav nav-pills nav-justified">
-            <li><a href="/Playstation4">Playstation 4</a></li>
-            <li><a href="/XboxOne">Xbox One</a></li>
-            <li><a href="/WiiU">Wii U</a></li>
-       </ul>
+      <a class="navbar-brand" href="">Digital Shop</a>
     </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Video Games
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="Featured">Featured</a></li>
+          <li><a href="Playstation4">Playstation 4</a></li>
+          <li><a href="Xboxone">Xbox One</a></li>
+          <li><a href="Wiiu">Wii U</a></li>
+        </ul>
+      </li>
+      <li><a href="Movies">Movies</a></li>
+      <li><a href="Music">Music</a></li>
+    </ul>
    </div>
   </nav>
 
   <div class="container">
-       <h1><a> Video Games Catalogue </a> </h1>
+       <h1><a> Digital Shop </a> </h1>
        {% block content %}
-      <p>Here is a list of popular new releases.</p>
+      <p>Here you can find a wide selection of what we have to offer.</p>
       
  <a href="uncharted4"><img src="static/uncharted4.jpg" alt="Uncharted 4" style=
 "width:200px;height:320px;"></a>
