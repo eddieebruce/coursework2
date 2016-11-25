@@ -5,9 +5,9 @@ app = Flask(__name__)
 def root():
   return render_template('base.html'), 200
 
-@app.route('/Playstation4/')
-def root_Playstation4():
-  return render_template('Playstation4.html'), 200
+@app.route('/Videogames/')
+def root_Videogames():
+  return render_template('Videogames.html'), 200
 
 @app.route('/XboxOne/')
 def root_XboxOne():
@@ -16,6 +16,10 @@ def root_XboxOne():
 @app.route('/WiiU/')
 def root_WiiU():
   return render_template('Wiiu.html'), 200
+
+@app.route('/Signuplogin/')
+def root_Signuplogin():
+  return render_template('Signuplogin.html'), 200
 
 @app.route('/uncharted4/')
 def root_uncharted4():
