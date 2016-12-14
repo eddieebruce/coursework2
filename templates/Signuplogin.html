@@ -142,12 +142,14 @@ h2 {
     <div class="tab-content">
         <div id="sectionA" class= "tab-pane fade in active">
         <div class="innter-form">
-            <form class="sa-innate-form" method="post">
+            <form class="sa-innate-form" action="" method="post">
             <label>Email Address</label>
-            <input type="text" name="username">
+            <input type="email" name="email">
             <label>password</label>
             <input type="password" name="password">
-            <button type="submit">Sign In</button>
+            <button type="submit" class="btn" name="button" value="login">
+                Sign In
+            </button>
             <a href="">Frogot Password?</a>
             </form>
             </div>
@@ -164,8 +166,8 @@ h2 {
         <div id="sectionB" class"tab-pane fade">
             <div class="innter-form">
             <form class="sa-innate-form" method="post">
-            <label>Name</label>
-            <input type="text" name="username">
+            <label>Email Address</label>
+            <input type="text" name="email">
             <label>Password</label>
             <input type="password" name="password">
             <button type"submit">Join Now</button>

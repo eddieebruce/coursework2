@@ -1,5 +1,47 @@
-from flask import Flask, render_template, url_for, abort
+import bcrypt
+from functools import wraps
+from flask import Flask,session, redirect, flash,  render_template, request, url_for, abort 
 app = Flask(__name__)
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+
+valid_email = '40115101@live.napier.ac.uk'
+valid_pwhash = bcrypt.hashpw('secretpass', bcrypt.gensalt())
+
+def check_auth(email, password):
+    if(email == valid_email and
+        valid_pwhash == bcrypt.hashpw(password.encode('utf-8'), valid_pwhash)):
+            return True
+    return False
+
+def requires_login(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        status = session.get('logged_in', False)
+        if not status:
+            return redirect(url_for('.root'))
+        return f(*args, **kwargs)
+    return decorated
+
+@app.route('/logout/')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+
+@app.route("/")
+@requires_login
+def secret():
+    return render_template("base.html"), 200
+
+@app.route("/Signuplogin/", methods=['GET', 'POST'])
+def root_Signuplogin():
+    if request.method == 'POST':
+        user = request.form['email']
+        pw = request.form['password']
+
+        if check_auth(request.form['email'], request.form['password']):
+            session['logged_in'] = True
+            return redirect(url_for('.secret'))
+    return render_template('Signuplogin.html')
 
 @app.route('/')
 def root():
@@ -20,10 +62,6 @@ def root_Movies():
 @app.route('/Music/')
 def root_Music():
   return render_template('Music.html'), 200
-
-@app.route('/Signuplogin/')
-def root_Signuplogin():
-  return render_template('Signuplogin.html'), 200
 
 @app.route('/uncharted4/')
 def root_uncharted4():
@@ -145,6 +183,10 @@ def root_windwaker():
 def root_videogames_windwaker():
   return render_template('windwakerhd.html'), 200
 
+@app.route('/videogames/gta5/')
+def root_videogames_gta5():
+  return render_template('gtav.html'), 200
+
 @app.route('/Movies/avengers')
 def root_Movie_avengers():
   return render_template('avengers.html'), 200
@@ -196,6 +238,10 @@ def root_Movies_skyfall():
 @app.route('/Movies/whiplash/')
 def root_Movies_whiplash():
   return render_template('whiplash.html'), 200
+
+@app.route('/Movies/spiderman/')
+def root_Movies_spiderman():
+  return render_template('spiderman.html'), 200
 
 @app.route('/Music/foofighters/')
 def root_Music_foofighters():
@@ -256,6 +302,10 @@ def root_Music_blink():
 @app.route('/Music/bonjovi/')
 def root_Music_bonjovi():
   return render_template('bonjovi.html'), 200
+
+@app.route('/Music/falloutboy/')
+def root_Music_falloutboy():
+  return render_template('falloutboy.html'), 200
 
 @app.route('/Movies/darkknight/')
 def root_Movies_darkknight():
