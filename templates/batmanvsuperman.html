@@ -3,16 +3,17 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Nintendo Land </p>
+   <p> Batman V Superman: Dawn of Justice</p>
  
-<img src="/static/nintendoland.jpg" alt="NintendoLand" align="left"
+<img src="/static/batmanvsuperman.jpg" alt="Batman V Superman" align="left"
 style="width:500px;height:620px;">
 
 <style>
@@ -30,9 +31,8 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Nintendo Land is a party game that features twelve diffrent minigames,
-each based on an existing Nintendo game franchise such as Mario and The Legend
-of Zelda, spicted as attractions in the eponymous fictional amusement park.
+<em> Batman V Superman: Dawn of Justice is an American superhero film featuring
+the DC Comics characters being manupulated by Lex Luthor to fight each other.
 
 <br>
 <br>
@@ -41,26 +41,51 @@ of Zelda, spicted as attractions in the eponymous fictional amusement park.
 
 </em>
 <b>Release Year:</b>
-<em> 30/11/2012</em>
+<em> 19/03/2016</em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Nintendo EAD</em>
+<b>Director:</b>
+<em> Zack Snyder</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Wii U</em>
+<b> Starring:</b>
+<em>Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg, Gal Gadot</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="on0" value="Color">
+  <select name="os0" id="os0">
+    <option value="Select a Platform">-- Select a Platform --</option>
+    <option value="DVD">DVD</option>
+    <option value="Blu Ray">Blu Ray</option>
+  </select>
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

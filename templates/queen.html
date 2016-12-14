@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Fallout 4 </p>
+   <p> Queen </p>
  
-<img src="/static/fallout4.jpg" alt="Fallout 4" align="left"
-style="width:500px;height:620px;">
+<img src="/static/queen.jpg" alt="Queen" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,10 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Fallout 4 is an action role-playing game set in an open world
-post-apocalyptic enviroment that encompasses the city of Boston and the
-surrounding Massachusetts regon known as "The Commonwealth".
-
+<em> Greatest Hits
 <br>
 <br>
 <br>
@@ -41,26 +39,44 @@ surrounding Massachusetts regon known as "The Commonwealth".
 
 </em>
 <b>Release Year:</b>
-<em> 10/11/2015 </em>
+<em> 26/10/1981 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Bethesda Game Studios</em>
+<b>Genre:</b>
+<em> Rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One, Playstation 4</em>
+<b> Band Members:</b>
+<em>Freddy Mercury, Brian May, Roger Taylor, Mike Grose, Spike Edney</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

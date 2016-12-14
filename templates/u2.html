@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Forza Motorsport 5 </p>
+   <p> U2 </p>
  
-<img src="/static/forza.jpg" alt="Forza" align="left"
-style="width:500px;height:620px;">
+<img src="/static/u2.jpg" alt="U2" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,9 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Forza Motorsport 5 is a racing video game that lets you race in over 200
-cars from over 50 manufacturers and race on 17 circuits.
-
+<em> Greatist Hits
 <br>
 <br>
 <br>
@@ -40,26 +39,44 @@ cars from over 50 manufacturers and race on 17 circuits.
 
 </em>
 <b>Release Year:</b>
-<em> 22/11/2013 </em>
+<em> 02/11/1998 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Turn 10 Studios</em>
+<b>Genre:</b>
+<em> Rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One</em>
+<b> Band Members:</b>
+<em>Bono, The Edge, Adam Clayton, Larru Mullen Jr.</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

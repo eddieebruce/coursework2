@@ -3,16 +3,17 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Pikmin 3 </p>
+   <p> Scream </p>
  
-<img src="/static/pikmin3.jpg" alt="Pikmin 3" align="left"
+<img src="/static/scream.jpg" alt="Scream" align="left"
 style="width:500px;height:620px;">
 
 <style>
@@ -30,11 +31,9 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Pikmin 3 is a real-time strategy game that focuses on the player
-controlling three alien captains who explore the surface of a planet known as
-"PNF-404" in search of cultivable fruit seeds to save their home planet,
-Koppai, from famine. They meet and befriend the Pikmin, who assist them.
-
+<em>Scream is a American slasher film that follows Sidney Prescott, a high
+school student in the fictional town of Woodsboro, California, who becomes the
+target of a mysterious kilelr known as Ghostface.
 <br>
 <br>
 <br>
@@ -42,26 +41,51 @@ Koppai, from famine. They meet and befriend the Pikmin, who assist them.
 
 </em>
 <b>Release Year:</b>
-<em> 26/07/2013 </em>
+<em> 20/12/1996 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Nintendo EAD</em>
+<b>Director:</b>
+<em> Wes Craven</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Wii U</em>
+<b> Starring:</b>
+<em>David Arquette, Neve Campbell, Courteney Cox</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="on0" value="Color">
+  <select name="os0" id="os0">
+    <option value="Select a Platform">-- Select a Platform --</option>
+    <option value="DVD">DVD</option>
+    <option value="Blu Ray">Blu Ray</option>
+  </select>
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

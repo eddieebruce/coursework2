@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Driveclub </p>
+   <p> Oasis </p>
  
-<img src="/static/driveclub.jpg" alt="Driveclub" align="left"
-style="width:500px;height:620px;">
+<img src="/static/oasis.jpg" alt="Oasis" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,10 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Driveclub is a 2014 racing video game in which players compete in racing
-events around the world in a variety of different fashions. Players can compete
-in clubs with other players, earning a reputation as one of the best clubs, and
-leveling up to unlocl better items.
+<em> Greatest Hits
 
 <br>
 <br>
@@ -42,26 +40,44 @@ leveling up to unlocl better items.
 
 </em>
 <b>Release Year:</b>
-<em> 08/10/2014 </em>
+<em> 20/11/2006 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Evolution Studios</em>
+<b>Genre:</b>
+<em> Rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Playstation 4</em>
+<b> Band Members:</b>
+<em>Noel Gallagher, Zak Starkey, Laim Gallagher, Paul Arthurs</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

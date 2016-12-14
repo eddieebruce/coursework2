@@ -10,11 +10,6 @@
 {% endblock %}
 
 {% block content %}
-   <p> Uncharted 4</p>
- 
-<img src="/static/uncharted4.jpg" alt="Uncharted 4" align="left"
-style="width:500px;height:620px;">
-
 <style>
 
 b {
@@ -26,6 +21,11 @@ color: #ffffff;
 font-size: 20px;
   }
 </style>
+   <p> Uncharted 4</p>
+ 
+<img src="/static/uncharted4.jpg" alt="Uncharted 4" align="left"
+style="width:500px;height:620px;">
+
 <br>
 <br>
 
@@ -64,7 +64,30 @@ brother.
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="on0" value="Color">
+  <select name="os0" id="os0">
+    <option value="Select a Platform">-- Select a Platform --</option>
+    <option value="Playstation 4">Playstation 4</option>
+  </select>
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
 
 {% endblock %}

@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Bayonetta 2 </p>
+   <p> Nirvna </p>
  
-<img src="/static/bayoneta2.jpg" alt="Bayonetta 2" align="left"
-style="width:500px;height:620px;">
+<img src="/static/nirvana.jpg" alt="Nirvana" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,9 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Bayonetta 2 is an action hack 'n' slash game where the player controls
-Bayoneta as she fights against the various angelic and demonic forces using
-combinations of melee attacks and gunplay.
+<em> Greatist Hits
 
 <br>
 <br>
@@ -41,26 +40,44 @@ combinations of melee attacks and gunplay.
 
 </em>
 <b>Release Year:</b>
-<em> 24/10/2014 </em>
+<em> 29/10/2002 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> PlatinumGames</em>
+<b>Genre:</b>
+<em> Grundge, Alternative rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Wii U</em>
+<b> Band Members:</b>
+<em>Kurt Cobain, Kirst Novoselic, Dave Grohl, Chad Channing</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

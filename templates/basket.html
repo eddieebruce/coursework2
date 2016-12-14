@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+      background-image:url(/static/background.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+
+{% endblock %}
+
+{% block content %}
+  <p>Here are the items in your basket</p>
+
+<form name="frmDigitalCart" action="localhost:5000/basket/" method="POST"
+onsubmit="return ValidateScreen1();">
+  <input type="HIDDEN" name="Recalc" value="1">
+  <input type="hidden" id="form_cart_name" name="form_cart_name"
+  value="democart">
+  <input type="hidden" id="bCookie" name="bCookie" value="true">
+  <input type="HIDDEN" name="cartoption" value>
+  <input type="hidden" name="ContinueShopping" value ="/">
+  <center>
+    <table class="CartDisplay" border="1" cellspacing="0" cellpadding="5"
+    bordercolor="#CCCCCC">
+      <tbody>
+        <tr class="CartTitle">
+          <td colspan="5">Shopping Cart Contents</td>
+        </tr>
+        <tr class="CartHeaders">
+          <td>DESCRIPTION</td>
+          <td>&nbsp;</sd>
+          <td>QTY</td>
+        </tr>
+        <tr class="CartItem">
+          <td align="left" width="65%">
+        </tr>
+        <tr>
+          <td colspan="5" align="center" nowrap>...</td>
+        </tr>
+      </tbody>
+    </table>
+  </center>
+</form>
+
+{% endblock %}

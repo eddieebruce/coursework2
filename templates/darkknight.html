@@ -3,16 +3,17 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> NBA 2K16 </p>
+   <p> The Dark Knight </p>
  
-<img src="/static/nba2k16.jpg" alt="NBA 2K16" align="left"
+<img src="/static/darkknight.jpg" alt="The Dark Knight" align="left"
 style="width:500px;height:620px;">
 
 <style>
@@ -30,10 +31,9 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> NBA 2K16 is a basketball simulation game which stimulates the experience
-of the National Basketball Association. Players play NBA games with real or
-created players and teams in various games modes, such as MyCareer, MyTeam, and
-standard games. 
+<em> The Dark Knight is a superhero thriller that follows batman dealing with
+the crime of Gotham but are menaced by a criminal mastermind known as the joker
+who seeks to undermine Batman's influence and creae chaos.
 
 <br>
 <br>
@@ -42,26 +42,51 @@ standard games.
 
 </em>
 <b>Release Year:</b>
-<em> 29/09/2015 </em>
+<em> 16/07/2008 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Visual Concepts</em>
+<b>Director:</b>
+<em> Christopher Nolan</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One, Playstation 4</em>
+<b> Starring:</b>
+<em>Christian Bale, Michael Caine, Heath Ledger, Morgan Freeman</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="on0" value="Color">
+  <select name="os0" id="os0">
+    <option value="Select a Platform">-- Select a Platform --</option>
+    <option value="DVD">DVD</option>
+    <option value="Blu Ray">Blu Ray</option>
+  </select>
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

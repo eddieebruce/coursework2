@@ -3,16 +3,17 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Mario & Sonic at the Rio 2016 Olympic Games </p>
+   <p> Inception </p>
  
-<img src="/static/marioandsonic.jpg" alt="Mario and Sonic" align="left"
+<img src="/static/inception.jpg" alt="Inception" align="left"
 style="width:500px;height:620px;">
 
 <style>
@@ -30,9 +31,8 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Mario & Sonic at the Rio 2016 Olympic Games is a soprts game that lets you
-contol various characters from the fictional universes of the Mario and Sonic
-frnachises in sporting sevents based on the 2016 Summer Olympics.
+<em> Inception is a 2010 science fiction heist thriller film that focuses on a
+professional thief who steals information by infiltrating the subconscious.
 
 <br>
 <br>
@@ -41,26 +41,51 @@ frnachises in sporting sevents based on the 2016 Summer Olympics.
 
 </em>
 <b>Release Year:</b>
-<em> 24/06/2016 </em>
+<em> 16/07/10</em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Sega Sports R&D</em>
+<b>Director:</b>
+<em> Christopher Nolan</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Wii U</em>
+<b> Starring:</b>
+<em>Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="on0" value="Color">
+  <select name="os0" id="os0">
+    <option value="Select a Platform">-- Select a Platform --</option>
+    <option value="DVD">DVD</option>
+    <option value="Blu Ray">Blu Ray</option>
+  </select>
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

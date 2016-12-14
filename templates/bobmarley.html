@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Gears of War 4 </p>
+   <p> Bob Marley </p>
  
-<img src="/static/gearsofwar4.jpg" alt="Gears of War 4" align="left"
-style="width:500px;height:620px;">
+<img src="/static/bobmarley.jpg" alt="Bob Marley" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,9 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Gears of War 4 is a third-person shooter game that takes place 25 years
-after the Imulsion Countermeasure weapon destroyed all Imulsion on the planet
-Sera, taking the locust and the Lambent with them as well.
+<em> Greatest Hits
 
 <br>
 <br>
@@ -41,26 +40,44 @@ Sera, taking the locust and the Lambent with them as well.
 
 </em>
 <b>Release Year:</b>
-<em> 11/10/2016 </em>
+<em> 03/05/1984 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> The Coalition</em>
+<b>Genre:</b>
+<em> Roots Reggae</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One</em>
+<b> Band Member:</b>
+<em>Bob Marley</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

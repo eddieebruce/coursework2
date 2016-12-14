@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Bloodborne </p>
+   <p> Adele </p>
  
-<img src="/static/bloodborne.jpg" alt="BloodBorne" align="left"
-style="width:500px;height:620px;">
+<img src="/static/adele.jpg" alt="Adele" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,10 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Bloodborne is an action role-playing game that follows the players
-character, the hunter, through the fictional decrepit Gothic, Victorian era
-inspired city of Yharnam, whose inhabitants have been afflicted with an
-abnormal blood-borne disease.
+<em> Greatest Hits
 
 <br>
 <br>
@@ -42,26 +40,44 @@ abnormal blood-borne disease.
 
 </em>
 <b>Release Year:</b>
-<em> 25/03/2015 </em>
+<em> 20/11/15 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> FromSoftware</em>
+<b>Genre:</b>
+<em> Soul</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Playstation 4</em>
+<b> Band Members:</b>
+<em>Adele</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

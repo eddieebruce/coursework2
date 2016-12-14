@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Call of Duty: Black Ops 2 </p>
+   <p> The Beatles </p>
  
-<img src="/static/codbo2.jpg" alt="Call of Duty: Black Ops 2" align="left"
-style="width:500px;height:620px;">
+<img src="/static/beatles.jpg" alt="The Beatles" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,10 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Call of Duty: Black ops 2 is a first-person shooter that features two
-connected storylines, the first set from 1986 to 1989 during the final years of
-the First Cold War, and the other set in 2020 during a second Cold War.
-
+<em> Greatest Hits
 <br>
 <br>
 <br>
@@ -41,26 +39,44 @@ the First Cold War, and the other set in 2020 during a second Cold War.
 
 </em>
 <b>Release Year:</b>
-<em> 30/11/2012 </em>
+<em> 11/10/1982 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Treyarch</em>
+<b>Genre:</b>
+<em> Rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One, Playstation 4, Wii U</em>
+<b> Band Members:</b>
+<em>John Lennon, Paul McCartney, George Harrison, Ringo Starr</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

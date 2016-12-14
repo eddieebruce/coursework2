@@ -1,0 +1,82 @@
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="on0" value="Color">
+<label for="os0">Color scheme</label>
+  <select name="os0" id="os0">
+    <option value="Select a color scheme">-- Select a Platform --</option>
+    <option value="Blue">Blue</option>
+    <option value="Pink">Pink</option>
+    <option value="Yellow">Yellow</option>
+  </select>
+
+  <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="100" height="100">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
+
+
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+
+valid_email = '40115101@live.napier.ac.uk'
+valid_pwhash = bcrypt.hashpw('secretpass', bcrypt.gensalt())
+
+def check_auth(email, password):
+    if(email == valid_email and
+        valid_pwhash == bcrypt.hashpw(password.encode('utf-8'), valid_pwhash)):
+            return True
+    return False
+
+def requires_login(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        status = session.get('logged_in', False)
+        if not status:
+            return redirect(url_for('.root'))
+        return f(*args, **kwargs)
+    return decorated
+
+@app.route('/logout/')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+
+@app.route("/")
+@requires_login
+def secret():
+    return render_template("base.html"), 200
+
+@app.route("/Signuplogin/", methods=['GET', 'POST'])
+def root_Signuplogin():
+    if request.method == 'POST':
+        user = request.form['email']
+        pw = request.form['password']
+
+        if check_auth(request.form['email'], request.form['password']):
+            session['logged_in'] = True
+            return redirect(url_for('.secret'))
+    return render_template('Signuplogin.html')
+
+<P>
+<input type="hidden" name"on0" value="Platform">
+<label for="os0" color="#818791">Platform</label>
+  <select name="os0" id="os0">
+    <option value="Select a platform">-- Select a Platform --</option>
+    <option value="Playstation 4">Playstation 4</option>
+  </select>
+<P>
+<BR><input name="Add to Cart" type=image src=/static/basket.jpg border=0
+width="100" height="100"> <BR>
+</FORM>
+<A HREF="/">Home</A>

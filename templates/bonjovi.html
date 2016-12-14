@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Destiny </p>
+   <p> Bon Jovi </p>
  
-<img src="/static/destiny.jpg" alt="Destiny" align="left"
-style="width:500px;height:620px;">
+<img src="/static/bonjovi.jpg" alt="Bon Jovi" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,11 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Destiny is an online-only first-person shooter game that is set in a
-mythic science fiction world, the game features a multiplayer "shared-world"
-envitoment with elements of role-playing games. Players take on the role of a
-Guardian, defenders of Earth's last safe city as they wield a power called
-light to portect the City from diffrent alien races. 
+<em> Greatist Hits
 
 <br>
 <br>
@@ -43,26 +40,44 @@ light to portect the City from diffrent alien races.
 
 </em>
 <b>Release Year:</b>
-<em> 27/10/2015 </em>
+<em> 29/10/2010 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> 343 Industries</em>
+<b>Genre:</b>
+<em> Rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One</em>
+<b> Band Members:</b>
+<em>Jon Bon Jovi, Tico Torres, Phil X, David Bryan, Hush McDonald</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

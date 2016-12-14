@@ -2,6 +2,7 @@ import bcrypt
 from functools import wraps
 from flask import Flask,session, redirect, flash,  render_template, request, url_for, abort 
 app = Flask(__name__)
+
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 valid_email = '40115101@live.napier.ac.uk'
@@ -43,6 +44,7 @@ def root_Signuplogin():
             return redirect(url_for('.secret'))
     return render_template('Signuplogin.html')
 
+
 @app.route('/')
 def root():
   return render_template('base.html'), 200
@@ -63,13 +65,17 @@ def root_Movies():
 def root_Music():
   return render_template('Music.html'), 200
 
+@app.route('/basket/')
+def root_basket():
+  return render_template('basket.html'), 200
+
 @app.route('/uncharted4/')
 def root_uncharted4():
   return render_template('uncharted4.html'), 200
 
 @app.route('/Videogames/uncharted4/')
 def root_Videogames__uncharted4():
-  return render_template('uncharted.html'), 200
+  return render_template('uncharted4.html'), 200
 
 @app.route('/halo5/')
 def root_halo5():
@@ -175,16 +181,16 @@ def root_dyinglight():
 def root_Videogames_dyinglight():
   return render_template('dyinglight.html'), 200
 
-@app.route('/windwaker/')
-def root_windwaker():
+@app.route('/windwakerhd/')
+def root_windwakerhd():
   return render_template('windwakerhd.html'), 200
 
-@app.route('/videogames/windwaker/')
-def root_videogames_windwaker():
+@app.route('/Videogames/windwakerhd/')
+def root_Videogames_windwakerhd():
   return render_template('windwakerhd.html'), 200
 
-@app.route('/videogames/gta5/')
-def root_videogames_gta5():
+@app.route('/Videogames/gta5/')
+def root_Videogames_gta5():
   return render_template('gtav.html'), 200
 
 @app.route('/Movies/avengers')

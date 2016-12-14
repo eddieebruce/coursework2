@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Call of Duty: Ghosts </p>
+   <p> Meat Loaf </p>
  
-<img src="/static/codghosts.jpg" alt="Call of Duty: Ghosts" align="left"
-style="width:500px;height:620px;">
+<img src="/static/meatloaf.jpg" alt="Meatloaf" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,9 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Call of Duty: Ghosts is a first-person shooter video game set in an
-alternate timeline that follows the nuclear destruction of the missle east.
-
+<em> Greatist Hits
 <br>
 <br>
 <br>
@@ -40,26 +39,44 @@ alternate timeline that follows the nuclear destruction of the missle east.
 
 </em>
 <b>Release Year:</b>
-<em> 29/11/2013 </em>
+<em> 24/11/1998 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Infinity Ward</em>
+<b>Genre:</b>
+<em> Rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One, Playstation 4, Wii U</em>
+<b> Band Members:</b>
+<em>Michael Lee Aday</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

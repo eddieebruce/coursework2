@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Game & Wario </p>
+   <p> Sum 41 </p>
  
-<img src="/static/wario.jpg" alt="Game and Wario" align="left"
-style="width:500px;height:620px;">
+<img src="/static/sum41.jpg" alt="Sum 41" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,8 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em>Game & Wario is a party video game in the Wario series that revolves around
-16 minigames played using the Wii U GamePad.
+<em>Greatest Hits
 
 <br>
 <br>
@@ -40,27 +40,45 @@ font-size: 20px;
 
 </em>
 <b>Release Year:</b>
-<em> 28/06/2013 </em>
+<em> 26/11/2008 </em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b>Developer:</b>
-<em> Intelligent Systems</em>
+<b>Genre:</b>
+<em> Punk Rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Wii U</em>
+<b> Band Members:</b>
+<em>Deryck Whibley, Cone McCaslin, Steve Jocz, Dave Baksh, Tom Thacker</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

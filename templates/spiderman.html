@@ -3,16 +3,17 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Titanfall </p>
+   <p> Spider-Man </p>
  
-<img src="/static/titianfall.jpg" alt="TitanFall" align="left"
+<img src="/static/spiderman.jpg" alt="Spiderman" align="left"
 style="width:500px;height:620px;">
 
 <style>
@@ -30,9 +31,8 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Titanfall is a multiplayer first-person shooter game where the players
-control "pilots" and their mech-style Titans, and fight six-onsix matches set
-in war-torn outer space colonies.
+<em> Spider-Man is an American superhero film based on the Marvel Comics
+character of the same name. 
 
 <br>
 <br>
@@ -41,26 +41,51 @@ in war-torn outer space colonies.
 
 </em>
 <b>Release Year:</b>
-<em> 11/03/2014</em>
+<em> 03/05/2002</em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Respawn Entertainment</em>
+<b>Director:</b>
+<em> Sam Raimi</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One</em>
+<b> Starring:</b>
+<em>Tobey Maguire, Willem Dafoe, Kirsten Dunst, James Franco</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="on0" value="Color">
+  <select name="os0" id="os0">
+    <option value="Select a Platform">-- Select a Platform --</option>
+    <option value="DVD">DVD</option>
+    <option value="Blu Ray">Blu Ray</option>
+  </select>
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

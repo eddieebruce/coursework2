@@ -3,16 +3,17 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Metal Gear Solid V: The Definitive Experience </p>
+   <p> The Shwshank Redemption </p>
  
-<img src="/static/metalgearsolidv.jpg" alt="Metal Gear Solid V: The Definite edition" align="left"
+<img src="/static/shawshank.jpg" alt="The Shawshank Redemption" align="left"
 style="width:500px;height:620px;">
 
 <style>
@@ -30,12 +31,10 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Metal Gear Solid V: The Definitive Experience is an open world action-adventure
-stealth video game that combines ground zeroes and the phantom pain in one
-game. Set in 1984 the story follows mercenary leader Venom Snake (also known as
-Big Boss) as he ventures into Soviet-occupied Kabul Province and the
-Angola-Zaire border region to exact revenge on the people who destroyed his
-forces and came close to killing him.
+<em> The ShawShank Redemption is an American drama film that tells the story of
+Andy Dufresne, a banker who is sentenced to life in Shawshank State
+Penitenitary for the murder of his wife and her lover, despite his claims of
+innocence.
 
 <br>
 <br>
@@ -44,26 +43,51 @@ forces and came close to killing him.
 
 </em>
 <b>Release Year:</b>
-<em> 16/10/2016 </em>
+<em> 23/09/1994 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> Kojima Productions</em>
+<b>Director:</b>
+<em> Frank Darabont</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One, Playstation 4</em>
+<b> Starring:</b>
+<em>Tim Robbins, Morgan Freeman</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="on0" value="Color">
+  <select name="os0" id="os0">
+    <option value="Select a Platform">-- Select a Platform --</option>
+    <option value="DVD">DVD</option>
+    <option value="Blu Ray">Blu Ray</option>
+  </select>
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

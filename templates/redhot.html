@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Captain Toad: Treasure Tracker </p>
+   <p> Red Hot Chili Peppers </p>
  
-<img src="/static/captaintoad.jpg" alt="Captain Toad" align="left"
-style="width:500px;height:620px;">
+<img src="/static/redhot.jpg" alt="Red Hot chillie Peppers" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,9 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Captain Toad: Treasure Tracker is an action puzzle video game where the
-players control Captain Toad and his companion Toadette in search for gold
-stars.
+<em> Greatest Hits
 
 <br>
 <br>
@@ -41,26 +40,44 @@ stars.
 
 </em>
 <b>Release Year:</b>
-<em> 21/12/2014 </em>
+<em> 18/11/2003 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> 1-UP Studio </em>
+<b>Genre:</b>
+<em> Funk Rock </em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Wii U</em>
+<b> Band Members:</b>
+<em>Anthony Kiedis, Flea, Josh Klinghoffer, Chad Smith</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

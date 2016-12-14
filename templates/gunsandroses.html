@@ -3,18 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Donkey Kong Country: Tropical Freeze </p>
+   <p> Guns N' Roses </p>
  
-<img src="/static/donkeykongcountrytf.jpg" alt="Donkry Kong Country: Tropical
-Freeze" align="left"
-style="width:500px;height:620px;">
+<img src="/static/gunsandroses.jpg" alt="Guns and Roses" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -31,9 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Donkey Kong Country: Tropical Freeze is a side-scrolling game that sees
-Donkey Kong and his friends travelling through six diffrent islands in order to
-defeat the Snowmads.
+<em> Greatest Hits
 
 <br>
 <br>
@@ -42,26 +40,44 @@ defeat the Snowmads.
 
 </em>
 <b>Release Year:</b>
-<em> 21/02/2014 </em>
+<em> 23/03/2004 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> 343 Industries</em>
+<b>Genre:</b>
+<em> Hard Rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Wii U</em>
+<b> Band Members:</b>
+<em>W. Axl Rose, Slash, Izzy Stradlin, Duff McKagan, Steven Adler</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}

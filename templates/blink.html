@@ -3,17 +3,18 @@
 
 {% block head %}
 
-      background-image:url(/static/greybackground.jpg);
+      background-image:url(/static/background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
 
 {% endblock %}
 
 {% block content %}
-   <p> Dark Souls 3 </p>
+   <p> Blink-182 </p>
  
-<img src="/static/darksouls3.jpg" alt="Dark Souls 3" align="left"
-style="width:500px;height:620px;">
+<img src="/static/blink.jpg" alt="Blink 182" align="left"
+style="width:620px;height:620px;">
 
 <style>
 
@@ -30,9 +31,7 @@ font-size: 20px;
 <br>
 
 <b>Summary:</b>
-<em> Dark Souls 3 is an action role-playing game that players are equipped with
-a variety of wepons to fight against enemies. Set in olf times, and kets you
-fight demons and monsters for their souls.
+<em> Greatest Hits
 
 <br>
 <br>
@@ -41,26 +40,44 @@ fight demons and monsters for their souls.
 
 </em>
 <b>Release Year:</b>
-<em> 12/04/2016 </em>
+<em> 31/10/2005 </em>
 
 <br>
 <br>
 <br><br>
 
-<b>Developer:</b>
-<em> FromSoftware</em>
+<b>Genre:</b>
+<em> Pop Rock</em>
 
 <br>
 <br>
 <br>
 <br>
 
-<b> Platform(s):</b>
-<em>Xbox One, Playstation 4</em>
+<b> Band Members:</b>
+<em>Mark Hoppus, Tom Delonge, Travis Barker, Scott Raynor</em>
 
 <br>
 <br>
-<br>
-<br>
+
+<form  action="/basket/"
+method="post">
+<input type="hidden" name="business" value="kin@kinskards.com">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+
+<input type="hidden" name="item_name"  value="Item">
+<input type="hidden" name="amount" value="3.95">
+<input type="hidden" name="currency_code" value="USD">
+
+ <BR><BR><BR> <input type="image" name="submit"
+
+src="/static/basket.jpg"
+   alt="Add to Cart" width="400" height="75">
+  <img alt="" width="1" height="1"
+   src="https://ww.paypalobjects.com/en_US/i/scr/pixel.gif" > <BR>
+</form>
+
 
 {% endblock %}
