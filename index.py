@@ -1,8 +1,9 @@
 import bcrypt
 from functools import wraps
-from flask import Flask,session, redirect, flash,  render_template, request, url_for, abort 
-app = Flask(__name__)
+from flask import Flask, session, redirect, request, render_template, url_for, abort
+from flask import Flask
 
+app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 valid_email = '40115101@live.napier.ac.uk'
@@ -23,15 +24,6 @@ def requires_login(f):
         return f(*args, **kwargs)
     return decorated
 
-@app.route('/logout/')
-def logout():
-    logout_user()
-    return redirect(url_for('index'))
-
-@app.route("/")
-@requires_login
-def secret():
-    return render_template("base.html"), 200
 
 @app.route("/Signuplogin/", methods=['GET', 'POST'])
 def root_Signuplogin():
@@ -43,7 +35,6 @@ def root_Signuplogin():
             session['logged_in'] = True
             return redirect(url_for('.secret'))
     return render_template('Signuplogin.html')
-
 
 @app.route('/')
 def root():
